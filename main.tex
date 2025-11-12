@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in, includehead]{geometry}
-\usepackage{titling, ragged2e, fancyhdr, titlesec}
+\usepackage{titling, ragged2e, fancyhdr, titlesec, dirtytalk, setspace}
 \usepackage{fontspec}
 \usepackage[notes, backend=biber]{biblatex-chicago}
 \addbibresource{ref.bib}
@@ -19,21 +19,25 @@
   \fancyhead[C]{\bfseries \bibname \ \textemdash \ \itshape \thebibsec}
 }
 
-\setmainfont{Georgia}
+\setmainfont{Times New Roman}
 \setlength{\headheight}{15pt}
+\setlength{\footnotesep}{10pt}
 
 \titleformat{\section}[hang]{\normalsize\bfseries}{\thesection}{10pt}{\RaggedRight}
 
-\pretitle{\RaggedRight\normalsize}
+\pretitle{\RaggedRight\normalsize\itshape}
 \posttitle{\\ \vspace{14pt}}
 \preauthor{\RaggedRight\normalsize}
 \postauthor{\\ \vspace{14pt}}
 \predate{\RaggedRight\normalsize}
 \postdate{\\ \vspace{14pt}}
 
-\author{Autumn Keesbury}
-\date{Fall 2025}
 \title{Dark Woke Essay for the William M. Locke Prize}
+\author{Professor Stephen Andrews 
+\\\vspace{14pt} Autumn Keesbury}
+\date{HIST-A 348}
+
+%% \doublespacing
 
 \begin{document}
 \maketitle
@@ -43,9 +47,25 @@
 \fancyhead[R]{Keesbury, \thepage}
 \fancyhead[L]{\thetitle}
 
-\section{Intro}\label{sec:intro} % (fold)
+\say{I go a great deal into the Hospitals. Washington is full of them \textemdash both in town and out around the outskirts}, wrote Walt Whitman in January of
+1863\autocite{Whitman1863}. In these hospitals, Whitman found \say{the best expression of American character I have ever seen or conceived} exhibited by
+\say{these ranks of sick and dying young men}. Whitman was not alone in perceiving a truth of the American Civil War, and indeed of America in general,
+within the hospitals of his day; in fact, many of his contemporaries, perhaps most famously S. Weir Mitchell, found themselves returning to the scene of the
+surgical ward even decades after Appomattox, in search of the War and its meaning\autocite{Herschbach1995}. Although these men concerned themselves mostly
+with the poetry of the medical, it remains true that the Civil War was a heavily medical and medicalized event.
 
-% section Intro (end)
+The Civil War of course saw a great increase in the technical ability of medicine -- by what means and how effectively a doctor was able to diagnose and treat a patient -- 
+but it also saw a far more fundamental restructuring of American medicine. For, in the direct prelude to the War, medicine was greatly localized and treatment was 
+generally delivered by a town doctor, typically within one's home; whereas in the days immediately following the War, one sees a much more centralized and 
+bureaucratic medical system, spread across the country, which would generally treat patients exclusively within the walls of the hospital.
+
+It is this transformation, its mechanisms, its causes, and its greater bearing on the history of American medical science, which I will investigate in this paper.
+I will draw upon the extensive records of the United States Sanitary Commission, an extra-governmental organization which operated similarly to an Executive Department
+concerned with hygiene and medical practices, as well as a vast body of research on the theory and practice of medical history, often with specific reference to
+the American Civil War. I shall argue that understanding the War as a medical event, and specifically analyzing it as an epidemic\footnotemark, yields many insights
+into how and why this change took place. All of this shall be to argue the conclusion that, during the Civil War, the bureaucratic and technical aspects of medicine
+were separated, and thus were allowed to change in their natures: the former turned into a great disciplinary institution, the latter into a more normative, less
+individual, procedure.
 
 \newpage
 \pagestyle{bibstyle}

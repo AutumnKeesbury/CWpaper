@@ -1,0 +1,6 @@
+# set layout
+layout tall
+# set working dir
+cd '/Users/autumn/Library/Mobile Documents/com~apple~CloudDocs/IU/IU-2025-26/Semester 1/Civil War and Reconstruction/paper2'
+# create "main" window and run nvim
+launch --title "Edit" /opt/homebrew/bin/nvim
