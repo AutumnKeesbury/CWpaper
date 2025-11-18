@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in, includehead]{geometry}
-\usepackage{titling, ragged2e, fancyhdr, titlesec, dirtytalk, setspace}
+\usepackage{titling, ragged2e, fancyhdr, titlesec, dirtytalk, setspace, hyperref}
 \usepackage{fontspec}
 \usepackage[notes, backend=biber]{biblatex-chicago}
 \addbibresource{ref.bib}
@@ -19,11 +19,23 @@
   \fancyhead[C]{\bfseries \bibname \ \textemdash \ \itshape \thebibsec}
 }
 
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=magenta,
+  urlcolor=blue,
+  pdftitle={Paper 2},
+  breaklinks=true,
+  citecolor=black,
+}
+\urlstyle{same}
+
 \setmainfont{Times New Roman}
 \setlength{\headheight}{15pt}
 \setlength{\footnotesep}{10pt}
 
-\titleformat{\section}[hang]{\normalsize\bfseries}{\thesection}{10pt}{\RaggedRight}
+\titleformat{\section}[hang]{\large\bfseries}{\thesection}{10pt}{\RaggedRight}
+\titleformat{\subsection}[runin]{\normalsize\bfseries}{(\thesubsection)}{5pt}{}
 
 \pretitle{\RaggedRight\normalsize\itshape}
 \posttitle{\\ \vspace{14pt}}
@@ -37,39 +49,124 @@
 \\\vspace{14pt} Autumn Keesbury}
 \date{HIST-A 348}
 
-%% \doublespacing
+\doublespacing
 
 \begin{document}
+
+\newcommand{\thesec}
+
 \maketitle
 \thispagestyle{firststyle}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{Keesbury, \thepage}
-\fancyhead[L]{\thetitle}
+\fancyhead[L]{\thesec}
 
-\say{I go a great deal into the Hospitals. Washington is full of them \textemdash both in town and out around the outskirts}, wrote Walt Whitman in January of
-1863\autocite{Whitman1863}. In these hospitals, Whitman found \say{the best expression of American character I have ever seen or conceived} exhibited by
-\say{these ranks of sick and dying young men}. Whitman was not alone in perceiving a truth of the American Civil War, and indeed of America in general,
-within the hospitals of his day; in fact, many of his contemporaries, perhaps most famously S. Weir Mitchell, found themselves returning to the scene of the
-surgical ward even decades after Appomattox, in search of the War and its meaning\autocite{Herschbach1995}. Although these men concerned themselves mostly
-with the poetry of the medical, it remains true that the Civil War was a heavily medical and medicalized event.
+Thesis: \textit{The Civil war marked a great shift in American medicine. This shift was realized in two main ways: (i) structurally, in
+the ordering of spaces; and (ii) perceptually, in the gaze of the individual doctor. The result of these changes was a rapid development
+of a normative medicine which penetrated all the aspects of life which formerly were not the subject of medicine.}
 
-The Civil War of course saw a great increase in the technical ability of medicine -- by what means and how effectively a doctor was able to diagnose and treat a patient -- 
-but it also saw a far more fundamental restructuring of American medicine. For, in the direct prelude to the War, medicine was greatly localized and treatment was 
-generally delivered by a town doctor, typically within one's home; whereas in the days immediately following the War, one sees a much more centralized and 
-bureaucratic medical system, spread across the country, which would generally treat patients exclusively within the walls of the hospital.
+\renewcommand{\thesec}{Early American medical thought}
+\section{\thesec} \label{sec:early}
+The history of medicine in America, from Independence to the Civil War, is far from a history of institutions. Like many
+aspects of life in the young republic, medical care was a largely local, often familial, service. Of course there were
+cities, and these cities had hospitals, but these were far from a widespread phenomenon, and there was slight communication
+between them. The doctor provided treatment at the home of the patient, and only when they presented an ailment or injury too
+severe for a family member, often a mother or wife, to tend to. Although formal training was offered, many town doctors did not
+receive it, and were at most trained by apprenticing with another doctor, often a relative.
 
-It is this transformation, its mechanisms, its causes, and its greater bearing on the history of American medical science, which I will investigate in this paper.
-I will draw upon the extensive records of the United States Sanitary Commission, an extra-governmental organization which operated similarly to an Executive Department
-concerned with hygiene and medical practices, as well as a vast body of research on the theory and practice of medical history, often with specific reference to
-the American Civil War. I shall argue that understanding the War as a medical event, and specifically analyzing it as an epidemic\footnotemark, yields many insights
-into how and why this change took place. All of this shall be to argue the conclusion that, during the Civil War, the bureaucratic and technical aspects of medicine
-were separated, and thus were allowed to change in their natures: the former turned into a great disciplinary institution, the latter into a more normative, less
-individual, procedure.
+The specific institutions and methods of medicine in the pre-Civil War period are not the focus of this paper, which is instead
+concerned with the impact of the Civil War on American medicine. However, a cursory glance at the medical philosophy which then
+existed in the United States will be beneficial, if simply to establish a point of reference which elucidates magnitudes of
+changes to be examined. The specific texts selected as references for this section are George Wallis' 1794 \citetitle{Wallis1794}
+and William Yates' 1797 volume \citetitle{yates1797}, which provide valuable insights into the ideas surrounding disease and
+medicine with which the authors were contemporary.
+
+It is natural to begin with the definition of the disease, being that upon which all medicine is established. According to Wallis,
+\say{[b]y Disease is meant a general or local affection, by which the system is disturbed, or the action of a part impeded, perverted, 
+or destroyed}\autocite[202]{Wallis1794}. Importantly, Wallis and Yates differ on their interpretation of how fundamental disease is: 
+Yates asserts that \say{[d]iseases differ form each other, only in the degree of accumulation [withholding of stimuli], or exhaustion of 
+the excitability in the whole, or parts of the body}\autocite[31]{yates1797}; whereas Wallis holds that diseases are unique forms
+which target individual constitutions or humours\autocite[58]{Wallis1794}. The prevalence of taxonomical classification of disease
+at the time of the authors suggests that the latter understanding was more widespread, although it should also be noted that the
+distance which separates these two views is far from irreconcilable.
+
+Yates' approach to disease yields naturally to a methodology of identification, in that one disease may be distinguished from another
+by the \say{the degree of accumulation, or exhaustion of the excitability} presented by the patient \autocite[31]{yates1797}. Wallis similarly 
+identifies a disease as \say{discovered and distinguished by an enumeration of certain symptoms or appearances with which it is always associated}
+\autocite[202]{Wallis1794}. Clearly, then, the proper identification of disease was understood to depend upon the accuracy of the doctor's
+gaze, with the patient being simply a vessel for the interaction of constitutions and afflictions, with the role of the doctor being then
+to identify the truth existing in the workings of the body of the infirm. Indeed, Wallis even goes so far as to say of the idea that
+\say{all men are the best judges of their own constitution}: \say{I can by no means allow this to be a truth}\autocite[57]{Wallis1794}.
+
+The final piece of early American medical philosophy which I wish to identify are the means by which a person was thought to
+become afflicted by a disease. Wallis lists three causes of disease: \say{Predisposing -- when the constitution collectively, or in part,
+is in such a situation as is most favorable to produce disease}; \say{Remote, or inducing, which depend on the state of the climate -- 
+situation mode of life -- indiscretion -- or the elective power of morbid particles, called \textit{miasmata--virus--effluvia}}; and
+\say{Proximate or immediate, which are such as from their action constitute the immediate source of the disease}\autocite[202-3]{Wallis1794}.
+Notably, there is no mention of the transmission of disease between two infected bodies, a theme which Yates makes explicit, writing that
+\say{[c]ontagion has been enumerated as a cause of pestilential diseases. But as the existence of such a power is by no means provided, it ought 
+not to be admitted in philosophical disquisitions}\autocite[33]{yates1797}.
+
+Hence a very basic picture of medical thought in post-Revolutionary America is formed. This medicine was capable of recognizing disease and,
+to an extent, classifying them as collections of symptoms which manifested inside of the body of the patient. Yet it was not robust, and did
+not have a suitable explanation for the transmission of disease which accounted for the fact that a sick person, when placed into a room which
+otherwise would not induce disease in a healthy person, was capable of producing this effect. More fundamentally, however, this philosophy of
+medicine did not have the institutional foundation which would allow it to expand and contract with demand: in the late 18th century, there did
+not exist a medico-technical apparatus capable of handling, in a swift and effective manner, any event which should require a great volume of
+treatment.
+
+\renewcommand{\thesec}{The ordering of spaces}
+\section{\thesec} \label{sec:spaces}
+\subsection{An epidemic of bullets}
+The medical history of the Civil War may, at least in some ways, be written as the history of a series of great epidemics which stuck the
+United States between 1860 and '65. This portrayal is obviously an oversimplification, but I believe that there is great insight to be found
+in studying at least the evolution of medical institutions during the War through this lens. Indeed, when understood as responding to epidemics,
+many of the great re-orderings which the medical field underwent during the War years become much easier to see. It is this simple shift in
+viewpoint which, by virtue of its ability to provide far-reaching insights, served as the initial impetus for this paper.
+
+Before arriving at these insights, however, it must be understood what exactly is meant by the term 'epidemic'. In \citetitle{Foucault1994}, 
+Michel Foucault describes an epidemic as being \say{more than a particular form of a disease ... it was an autonomous, coherent, and adequate
+evaluation of disease}\autocite[23]{Foucault1994}. Thus an epidemic is understood not simply by the symptoms through which the disease 
+manifested itself, but also through its place in a social body. This separation of a disease from the direct physical form of its subject
+is a weaker form of a process which shall be discussed in some detail in Section \ref{sec:patient}: the identification of patient and disease 
+as fundamentally distinct entities. For this section, however, it is only important to understand that the epidemic was a disease which was
+tied to various conditions; as Foucault puts it, the \say{essential basis is determined by the time, the place, the 'fresh, sharp, subtle, 
+penetrating' air of Nîmes in winter or the sticky, thick, putrid air of Paris during a long, heavy summer}\footnote{\textit{ibid.}, 23}.
+
+An organizational structure which facilitated the synthesis of a homogeneous picture of an epidemic through superimposing and cross-checking 
+medical gazes was present in the Armies of the United States during the American Civil War, at all levels of administrative functioning. 
+Regimental surgeons and hospitals were tasked with documenting individual cases, meteorological data, and various other information situated at
+a similar level. Then there were the surgeons of the general hospitals, tasked with investigating and recording extraordinary cases which may be 
+exemplary, but also with conducting research into the nature of various conditions which were difficult or time-consuming to treat. Lastly, 
+situated near the highest administrative level, were the doctors who worked directly for the USSC, and whose duty it was to visit and write high-level 
+reports on the conditions of hospitals under the Sanitary Commission’s control. Taken together, the USSC encompasses four parallel, unlimited series 
+which extend the space of medical knowledge infinitely: the study of topographies (conducted at the top level by doctors like S.B. Hunt)
+\autocite{ussc:6:882}, meteorological observations (like those collected by Lyman)\autocite{ussc:6:775}, monitoring epidemics (see the reports on 
+outbreaks in hospitals)\autocite{ussc:10:1523}, and the description of extraordinary cases (e.g. Howard’s report on a case of death during the 
+administration of chloroform)\autocite{ussc:9:1340}.
+
+It is these parallel gazes which, through their integration into the military-political structures of the
+Armies of the United States, were able to cover a domain which was in many respects broader than that
+of the institutions to which they were formally subordinate. Indeed, everywhere the Armies of the Union
+went, they were followed by, or moved in lockstep with, the ever-vigilant gaze of a medicine of epidemics.
+Furthermore, there is often not just an isomorphism between the realized structures of the military and
+medical, but a whole series of such correspondences between their possible configurations: that is to say,
+a reorganization of one institution is accompanied by a similar reorganization of the other. In this sense,
+the medical gaze which knows an epidemic forms a negative copy of the individualizing disciplinary gaze;
+what the positively-determined structures of the military do not cover, the medical gaze steps in to observe.
+Through the union of these two institutions, a complete and totally penetrating gaze is inscribed upon a
+space which is necessarily opposed, at each point, to their very workings.
+
+
+\subsection{The panoptic hospital}
+
+\renewcommand{\thesec}{The creation of the case}
+\section{\thesec} \label{sec:patient}
 
 \newpage
 \pagestyle{bibstyle}
-\nocite{*}
+%\nocite{*}
 \renewcommand{\thebibsec}{Primary Documents}
 \printbibliography[keyword={primary}, title=\thebibsec]
 \renewcommand{\thebibsec}{References}
