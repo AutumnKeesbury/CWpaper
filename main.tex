@@ -31,6 +31,9 @@
 }
 \urlstyle{same}
 
+\usepackage{etoolbox}
+\AtBeginEnvironment{quote}{\par\singlespacing\small}
+
 \setmainfont{Times New Roman}
 \setlength{\headheight}{15pt}
 \setlength{\footnotesep}{10pt}
@@ -288,7 +291,7 @@ The first of the great shifts in American medicine which the Civil War induced w
 and the physical space of the hospital. There was, however, at the same time a much subtler shift, born not of grand spaces or militant
 discipline, but rather formed at the very point of genesis of all medicine: the interaction of the doctor and patient. It was not a revolution in
 the sense that it moved great bodies of troops, but in that it fundamentally changed the nature of medical perception. This is a history of how,
-during the Civil War, the once strictly remedial gaze of the surgeon, the doctor, and the pharmacist took on a normative character.
+during the Civil War, the once strictly remedial gaze of the surgeon, the doctor, and the pharmacist came to take up a normative character.
 
 \subsection{A generalized injury}
 A bullet wound is the most easily knowable disease.\footnote{In the sense of Yates and, to some extent, of Wallis.}
@@ -306,13 +309,13 @@ to treat one case, then, the doctor must hold in his mind the plurality of cases
 medical perception is remarkable.\autocite[58]{Wallis1794}
 
 Nowhere in the records of the USSC is a better example of this to be found than in a report by Dr. Ira Russell on various sorts of common injuries experienced by soldiers. Specifically in
-reference to injury of the knee joint, \say{the history of one of these cases}, he remarks, \say{is the history of all}\autocite[34]{ussc:2:194}. Dr. Russell
+reference to injury of the knee joint, \say{the history of one of these cases}, he remarks, \say{is the history of all}. Dr. Russell
 describes the initial state of the patient as being \say{very comfortable with slight local pain and swelling}. The patient would experience no
 \say{constitutional disturbances} for as many as two days, however they would appear by the third or fourth day, immediately following an increase in
 \say{pain and swelling of the knee}. Russell describes how, at the battle of Prairie Grove, amputations were not performed on those whose knee joints were
 wounded, resulting in \say{severe} local symptoms and a fever that \say{greatly reduced the patient}. This is used to stress the importance of timely
 amputation in such cases, as Russell notes that, when the surgeons did finally amputate the patient's leg, they did so \say{without in any way improving the
-	chance of recovery}.
+	chance of recovery}.\autocite[All quoted portions of this paragraph appear in][33]{ussc:2:194}
 
 Only after removing the patient, then, may the symptoms be recognized, interpreted, and synthesized into a diagnosis: it is this that is the power of the hospital.
 By interacting so often with the bodily injury, the doctor is conditioned to think of his work in terms of this generalizing perspective. The disease, once
@@ -324,7 +327,45 @@ could not be interpreted unless one concession was made by the doctor: that a di
 \say{To the exhaustive presence of the disease in its symptoms corresponds the unobstructed transparency of the pathological being with the syntax of a descriptive
 	language: a fundamental isomorphism of the structure of the disease and of the verbal form that circumscribes it}\autocite[95]{Foucault1994}.
 
-\section{Conclusion}
+\subsection{"Case 7th, a Soldier, name unknown"} Let us return to Russell's report on the Battle of Prairie Grove, specifically his notes on amputations of the
+thigh.\autocite[21]{ussc:2:194} These notes are typical for a report presented to the Sanitary Commission, with Russell beginning the section with the statement
+that \say{there have been 23 amputations of the thigh}, and proceeds to enumerate the history of each of said twenty-three cases.\autocite[21]{ussc:2:194}
+Indeed, the format of these notes is so generic that any researcher at all acquainted with this type of source should feel very much at home in the pages
+of Russell's report. Yet one entry, itself not atypical to those familiar, stuck out to me. It is brief enough that it may be reproduced in its entirety:
+
+\begin{quote}
+	Case 7\textsuperscript{th}, a Soldier, name unknown wounded Dec 7\textsuperscript{th} by a conical ball. Had extensive fracture of the left femur. Dr. Roap
+	amputated the thigh at the junction of the upper and middle third. Dec 11\textsuperscript{th} --- Patient gradually failed from the date of the operation and died
+	Dec 13\textsuperscript{th}.\autocite[25]{ussc:2:194}
+\end{quote}
+
+These few sentences, occupying only seven lines in Russell's handwriting and even fewer on this page, are perhaps the most extensive documentation of this man's
+life which ever existed. Indeed, myself and the reader of this paper may be the only people who have thought so extensively about his life and his death, and their
+meaning, in the current century. I do not, however, bring this up in order to wax poetic about the fleeting nature of life and one's memory. Rather, I am reminded
+of Foucault's words, \say{[a]ll those lives destined to pass beneath any discourse and disappear without ever having been told were able to leave traces -- brief,
+	incisive, often enigmatic -- only at the point of their instantaneous contact with power.}\autocite[161]{foucault2019} Foucault spoke here of a much more
+straightforward and disciplinary power, yet I cannot shake the feeling of relevance.
+
+For although we have so little of this man, even lacking his name, we do have \textit{something} of him. What we have is, very plainly, a case: through the
+documentary techniques which begun to emerge in the United States during the mid nineteenth-century, we are left with \say{traces} of this man and so many
+others like him. As is put so eloquently by Foucault, \say{[f]or a long time ordinary individuality ... remained below the threshold of description. To be
+	looked at, observed, described in detail, followed from day to day by an uninterrupted writing was a privilege.}\autocite[191]{Foucault1995}
+While obviously somewhat limited by the techniques of identification for individuals in the 1860s, what we are seeing in \say{Case 7\textsuperscript{th},
+	a Soldier, name unknown} are the beginnings of a medical field in which, through interacting with the classificatory and individualizing gaze of the
+doctor, no matter how briefly, the patient became forever the subject of disciplinary power. Here, then, are we to find the roots of a medical panopticism.
+
+\subsection{Bodies alive and dead} I wish to conclude with a discussion of an aspect of many of the case histories present in the records of the USSC, but which
+I did not find particularly relevant when first conducting research for this paper: the autopsy.
+
+The place of death in medicine prior to the nineteenth century had always been a somewhat awkward one. Though the motivation of remedial care has long been to
+push back, as far as possible, the death of the patient, and in this way the presence of death has been constant and immobile, it has always been so only
+in an implicit, strictly negative fashion. It remained the spectre, looming over the shoulder of the doctor, always visible, but the role of death was manifested,
+primarily, in the relationship between the it and the patient. Indeed, neither Wallis nor Yates present a treatment, philosophical or otherwise, of the subject of
+death, despite its relevance to the subject of their works. This is to say that, since Hippocrates, the role of the physician always begun with the disease,
+and ended with death --- only incidentally, then, did death show its bony face.
+
+\renewcommand{\thesec}{Conclusion}
+\section{\thesec}
 The American Civil War was a transformative time for medical perception within the United States. A large part of this is due to the sheer volume of injuries
 and illnesses, and their concentration in space and time, which result from an industrial war. I have attempted to outline the process by which this medical
 war gave rise to a normative and modern medicine, and how this change was manifested in the very space of medicine. This I feel I have done adequately.
